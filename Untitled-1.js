@@ -263,3 +263,23 @@
 // console.log(truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex"));
 // console.log(truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex"));
 // console.log(truthCheck([{"user": "Tinky-Winky", "sex": "male", "age": 0}, {"user": "Dipsy", "sex": "male", "age": 3}, {"user": "Laa-Laa", "sex": "female", "age": 5}, {"user": "Po", "sex": "female", "age": 4}], "age"));
+
+// function addTogether() {
+//   let args = [...arguments];
+//   if (args.every(x => typeof x === 'number') === false) return undefined;
+//   if (arguments.length === 1) {
+//     let arg1 = arguments[0];
+//     return function(arg2) {
+//       if (typeof arg2 !== 'number') return undefined;
+//       return arg1 + arg2;
+//     };
+//   }
+//   if (arguments.length === 2) {
+//     return arguments[0] + arguments[1];
+//   }
+// }
+
+//console.log(addTogether(2, 3)); // 5
+// console.log(addTogether(2)(3)); // 5
+//console.log(addTogether("http://bit.ly/IqT6zt")); //undefined
+//console.log(addTogether(2, "3")); //undefined
