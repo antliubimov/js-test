@@ -283,3 +283,44 @@
 // console.log(addTogether(2)(3)); // 5
 //console.log(addTogether("http://bit.ly/IqT6zt")); //undefined
 //console.log(addTogether(2, "3")); //undefined
+
+// var Person = function(firstAndLast) {
+//   // Complete the method below and implement the others similarly
+//   let first = firstAndLast.match(/\w+/g);
+
+//   this.getFullName = function() {
+//     return `${first[0]} ${first[1]}`;
+//   };
+//   this.getFirstName = function() {
+//     return first[0];
+//   };
+//   this.getLastName = function() {
+//     return first[1];
+//   };
+//   this.setFullName = function (name) {
+//     first = name.match(/\w+/g);
+//   };
+//   this.setFirstName = function (name) {
+//     first[0] = name;
+
+//   };
+//   this.setLastName = function (name) {
+//     first[1] = name;
+//   };
+
+// };
+
+// var bob = new Person('Bob Ross');
+// console.log(bob.getFullName());
+// console.log(Object.keys(bob).length); //should return 6.
+// console.log(bob instanceof Person); //should return true.
+// console.log(bob.firstName); //should return undefined.
+// console.log(bob.lastName); //should return undefined.
+// console.log(bob.getFirstName()); //should return "Bob".
+// console.log(bob.getLastName()); //should return "Ross".
+// console.log(bob.getFullName()); //should return "Bob Ross".
+// bob.setFirstName("Haskell");
+// console.log(bob.getFullName()); //should return "Haskell Ross" after bob.setFirstName("Haskell").
+// bob.setFullName("Haskell Curry");
+// console.log(bob.getFullName()); // Haskell Curry
+// console.log(bob.getLastName());  // Curry
