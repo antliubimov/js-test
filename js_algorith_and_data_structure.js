@@ -11,21 +11,42 @@
 // console.log(palindrome("_eye")); //true
 // console.log(palindrome("0_0 (: /-\ :) 0-0")); //true
 
-function convertToRoman(num) {
-  let roman = '';
-  const romanNumbers = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
-  const decimalNumbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-  for (let i = 0; i < decimalNumbers.length; i += 1) {
-    while (num >= decimalNumbers[i]) {
-      roman += romanNumbers[i];
-      num -=decimalNumbers[i];
-    }
-  }
-  return roman;
+// function convertToRoman(num) {
+//   let roman = '';
+//   const romanNumbers = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+//   const decimalNumbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+//   for (let i = 0; i < decimalNumbers.length; i += 1) {
+//     while (num >= decimalNumbers[i]) {
+//       roman += romanNumbers[i];
+//       num -=decimalNumbers[i];
+//     }
+//   }
+//   return roman;
 
+// }
+
+// console.log(convertToRoman(36));
+// console.log(convertToRoman(29)) // return "XXIX"
+// console.log(convertToRoman(83)); //return "LXXXIII"
+// console.log(convertToRoman(400)); //return "CD"
+
+function rot13(str) { // LBH QVQ VG!
+  let newStr = '';
+  for (let i = 0; i < str.length; i += 1) {
+    let charCode = str.charCodeAt(i);
+    if (charCode >=65 && charCode <= 90) {
+      if (charCode >= 78) {
+        charCode -= 13;
+      } else {
+        charCode += 13;
+      }
+    }
+    newStr += String.fromCharCode(charCode);
+  }
+  return newStr;
 }
 
-console.log(convertToRoman(36));
-console.log(convertToRoman(29)) // return "XXIX"
-console.log(convertToRoman(83)); //return "LXXXIII"
-console.log(convertToRoman(400)); //return "CD"
+// Change the inputs below to test
+console.log(rot13("SERR PBQR PNZC")); // FREE CODE CAMP
+console.log(rot13('SERR YBIR?')); //FREE LOVE?
+console.log(rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.")); //THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
